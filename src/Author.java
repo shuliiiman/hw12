@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     private String firstName;
     private String lastName;
@@ -16,16 +18,15 @@ public class Author {
         return
                 this.firstName + " " + this.lastName + ". ";
     }
+    /*@Override
+    public boolean equals(Object author) {переопределение иквалс. Object?
+        if (this==author) return true;если сравниваемый объект = объекту в параметрах-true?
+        if (author==null||getClass()!=author.getClass()) return false;
+
+        Author that = (Author) author;
+
+        return Objects.equals(firstName, that.firstName);//Objects?
+    }*/
     @Override
-    public boolean equals(Object other) { //метод equals
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author author = (Author) other;//(сравнение объекта класса  с другими объектами этого класса)
-        return firstName.equals(author.firstName);//(сравниваемое свойство)
-    }
-    @Override
-    public int hashCode() {//Метод hashCode
-        return java.util.Objects.hash(firstName);
-    }
+    public int hashCode(){return java.util.Objects.hash(firstName,lastName);}
 }

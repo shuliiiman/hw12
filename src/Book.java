@@ -16,8 +16,7 @@ public class Book {
     public int getYearOfPublication() {
         return this.yearOfPublication;
     }
-    public void setYearOfPublication(int yearOfPublication) {//создание сеттера
-
+    public void setYearOfPublication(int yearOfPublication) {//создание сеттера.
         this.yearOfPublication = yearOfPublication;
     }
     @Override
@@ -27,16 +26,9 @@ public class Book {
                 "Год публикации книги - " + this.yearOfPublication + ". ";
     }
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book book = (Book) other;
-        return name.equals(book.name);
-    }
-    @Override
     public int hashCode() {
         return java.util.Objects.hash(name);
     }
 
 }
+
