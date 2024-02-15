@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Author author = new Author("Роман", "Михайлов");
-        Book book = new Book("Солнце", author,2028);
+        Book book = new Book("Солнце", author,2028);// объект по классу Book.
         System.out.println(book);
 
         Author author1 = new Author("Глеб", "Горбовский");// объект по классу Author.

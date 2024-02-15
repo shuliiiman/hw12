@@ -25,7 +25,7 @@ public class Author {
         return firstName.equals(author.firstName);//(сравниваемое свойство)
     }
     @Override
-    public int hashCode() {//Метод hashCode
+    public int hashCode() {//Метод hashCode.
         return java.util.Objects.hash(firstName);
     }
 }
